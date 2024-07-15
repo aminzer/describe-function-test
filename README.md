@@ -19,7 +19,7 @@ export default formatGreeting;
 
 Example test:
 ```typescript
-import { describeFunctionTest } from '../src';
+import { describeFunctionTest } from '@aminzer/describe-function-test';
 import formatGreeting from './formatGreeting';
 
 describeFunctionTest(formatGreeting, __filename, {
