@@ -1,12 +1,9 @@
-import { relative, sep } from 'path';
+import { resolve } from 'path';
 import { toString as getAppRootPath } from 'app-root-path';
 import { ignoredPathParts, pathSeparatorRegex, testFileExtensions } from './config';
 
 const formatTestName = (testFilePath: string): string => {
-  const relativeTestFilePath = relative(
-    getAppRootPath().replace(pathSeparatorRegex, sep),
-    testFilePath.replace(pathSeparatorRegex, sep),
-  );
+  const relativeTestFilePath = resolve(testFilePath).replace(resolve(getAppRootPath()), '');
 
   return relativeTestFilePath
     .split(pathSeparatorRegex)
