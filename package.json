@@ -1,6 +1,6 @@
 {
   "name": "@aminzer/describe-function-test",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Simple helper for defining Jest tests for functions",
   "keywords": [
     "tests",
