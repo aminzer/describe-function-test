@@ -48,6 +48,11 @@ describeFunctionTest(formatGreeting, __filename, {
 `describeFunctionTest` is used for defining a test for the provided function with predefined test cases.
 It's using native Jest `describe` function under the hood.
 
+##### Import
+```typescript
+import { describeFunctionTest } from '@aminzer/describe-function-test';
+```
+
 ##### Parameters
 
 * `functionToTest` (`function`, required) - function to be tested.
@@ -71,3 +76,22 @@ It's using native Jest `describe` function under the hood.
 ##### Return value
 
 `void`, nothing is returned.
+
+**formatTestName**
+
+##### Overview
+
+`formatTestName` is used for generation of test name in format `path > to > tested > file`.
+
+##### Import
+```typescript
+import { formatTestName } from '@aminzer/describe-function-test';
+```
+
+##### Parameters
+
+* `testFilePath` (`string`, required) - Path to the test file. `__filename` can be used here.
+
+##### Return value
+
+`string` - formatted test name.
